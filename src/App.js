@@ -7,7 +7,7 @@ import Question1 from './components/Question1';
 
 
 
-  {
+  function App() {
   return (
              
     <div className="Divi">
