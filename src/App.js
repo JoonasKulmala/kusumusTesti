@@ -12,7 +12,7 @@ function App()  {
              
     <div className="Divi">
       <AppBar />
-        <Question1 />
+      <Question1 />
     </div>             
   
   );
