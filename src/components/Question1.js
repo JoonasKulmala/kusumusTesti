@@ -8,19 +8,19 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 
-import { makeStyles } from '@material-ui/core/styles';
+
 
 
 export default function Question1 () {
 
-    const [values, setValues] = React.useState([]);
+    
 
     const [question, setQuestion] = useState('');
     const [content, setContent] = useState('');
     const [content1, setContent1] = useState('');
     const [content2, setContent2] = useState('');
   
-    
+    const [values, setValues] = React.useState()
   
   
     const handleChange = (event) => {
@@ -28,7 +28,7 @@ export default function Question1 () {
     };
     
      
-    useEffect(() => fetchdata(), []);
+    useEffect(() => fetchdata(), );
   
     const fetchdata = () => {
     fetch('https://apitestingnew.herokuapp.com/kyselies')
@@ -46,34 +46,14 @@ export default function Question1 () {
   };
   
  
-  
-  
-  
-  
-
-  const useStyles = makeStyles((theme) => ({
-    root: {
-      textAlign: "center",
-    },
-    title: {
-      padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`,
-      fontSize:30
-    },
-  }));
-  
-  
-  const classes = useStyles();
-
-
-
-
+ 
 
   return (
     <div>
     
     <FormControl  component="fieldset">
       <FormLabel component="legend">Kyssäri</FormLabel>
-      <RadioGroup aria-label="gender" name="gender1" value={fetchdata} onChange={handleChange}>
+      <RadioGroup aria-label="kyssäri" name="kyssäri1" value={values} onChange={handleChange}>
         <FormControlLabel value={content} control={<Radio />} label={content} />
         <FormControlLabel value={content1} control={<Radio />} label={content1} />
         <FormControlLabel value={content2} control={<Radio />} label={content2} />

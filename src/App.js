@@ -6,14 +6,14 @@ import Question1 from './components/Question1';
 
 
 
+
 function App()  {
-           return (
+  return (
              
-             <div className="Divi">
-               <AppBar />
-               <Question1 />
-     
-              </div>             
+    <div className="Divi">
+      <AppBar />
+        <Question1 />
+    </div>             
   
   );
   
